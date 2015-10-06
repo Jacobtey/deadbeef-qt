@@ -18,7 +18,7 @@
 #define SIGNUM(x) ((x > 0) - (x < 0))
 
 #include <include/callbacks.h>
-#include <QtConcurrentRun>
+#include <QtConcurrent/QtConcurrentRun>
 #include <QFutureWatcher>
 #include "DBFileDialog.h"
 

@@ -19,9 +19,10 @@ endif(NOT DEADBEEF_API)
 
 include_directories(BEFORE SYSTEM ${CMAKE_INSTALL_PREFIX}/include)
 
-find_package(Qt4 4.4 COMPONENTS QtCore QtGui REQUIRED)
+find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED COMPONENTS Core Gui Widgets LinguistTools)
 
-include(${QT_USE_FILE})
+#include(${QT_USE_FILE})
+INCLUDE_DIRECTORIES(${Qt5Core_INCLUDE_DIRS} ${Qt5Gui_INCLUDE_DIRS} ${Qt5Widgets_INCLUDE_DIRS})
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR})
 
@@ -76,6 +77,8 @@ set(QT_HEADERS
     TabBar.h
     VolumeSlider.h
     )
+#include(${QT_USE_FILE})
+INCLUDE_DIRECTORIES(${Qt5Core_INCLUDE_DIRS} ${Qt5Gui_INCLUDE_DIRS} ${Qt5Widgets_INCLUDE_DIRS})
 
 set(HEADERS
     include/callbacks.h
@@ -107,10 +110,10 @@ include(${CMAKE_SOURCE_DIR}/plugins/CoverArt/CoverArt.cmake)
 include(${CMAKE_SOURCE_DIR}/plugins/Hotkeys/Hotkeys.cmake)
 configure_file(${CMAKE_SOURCE_DIR}/config.h.cmake ${CMAKE_SOURCE_DIR}/config.h)
 
-qt4_wrap_cpp(MOC_SRCS ${QT_HEADERS})
-qt4_wrap_ui(UIS_H ${FORMS})
-qt4_add_resources(RCC ${RESOURCES})
-qt4_add_translation(COMPILED_TRANSLATIONS ${TRANSLATIONS})
+qt5_wrap_cpp(MOC_SRCS ${QT_HEADERS})
+qt5_wrap_ui(UIS_H ${FORMS})
+qt5_add_resources(RCC ${RESOURCES})
+qt5_add_translation(COMPILED_TRANSLATIONS ${TRANSLATIONS})
 
 add_library(ddb_gui_Qt SHARED ${SOURCES} ${QT_HEADERS} ${HEADERS} ${MOC_SRCS} ${UIS_H} ${RCC} ${COMPILED_TRANSLATIONS})
 
