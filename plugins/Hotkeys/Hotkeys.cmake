@@ -27,5 +27,6 @@ if (HOTKEYS_ENABLED)
         )
     set(TRANSLATIONS ${TRANSLATIONS}
         plugins/Hotkeys/HotkeysPlugin_ru_RU.ts
+        plugins/Hotkeys/HotkeysPlugin_zh_CN.ts
         )
 endif (HOTKEYS_ENABLED)

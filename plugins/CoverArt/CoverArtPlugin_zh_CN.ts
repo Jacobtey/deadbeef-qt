@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="zh_CN">
+<context>
+    <name>CoverArtWidget</name>
+    <message>
+        <location filename="CoverArtWidget.cpp" line="13"/>
+        <source>Update cover</source>
+        <translation type="unfinished">更新封面</translation>
+    </message>
+</context>
+</TS>

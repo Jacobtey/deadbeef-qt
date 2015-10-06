@@ -27,5 +27,6 @@ if (ARTWORK_ENABLED)
         )
     set(TRANSLATIONS ${TRANSLATIONS}
         plugins/CoverArt/CoverArtPlugin_ru_RU.ts
+        plugins/CoverArt/CoverArtPlugin_zh_CN.ts
         )
 endif (ARTWORK_ENABLED)
