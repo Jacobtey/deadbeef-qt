@@ -101,6 +101,7 @@ set(RESOURCES
      
 set(TRANSLATIONS
     QtGui_ru_RU.ts
+    QtGui_zh_CN.ts
     )
 
 include(${CMAKE_SOURCE_DIR}/plugins/CoverArt/CoverArt.cmake)
