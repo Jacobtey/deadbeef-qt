@@ -1,6 +1,6 @@
 #include "CoverArtWrapper.h"
 
-#include <QtConcurrentRun>
+#include <QtConcurrent/QtConcurrentRun>
 
 #include "QtGuiSettings.h"
 #include "QtGui.h"

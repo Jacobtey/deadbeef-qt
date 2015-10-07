@@ -118,8 +118,8 @@ void MainThreadRun(void *) {
     QTranslator translator;
     translator.load(QString::fromUtf8(DEADBEEF_PREFIX) + QString("/share/deadbeef/translations/QtGui_") + locale);
     app.installTranslator(&translator);
-
-    QTextCodec::setCodecForTr(QTextCodec::codecForName("utf8"));
+//default to utf in qt5
+//QTextCodec::setCodecForTr(QTextCodec::codecForName("utf8"));
 
     MainWindow w;
     w.show();
